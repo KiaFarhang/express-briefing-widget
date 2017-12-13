@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annie Millerbernd</title>
+    <style>
+        img.podcastImage {
+            float: left;
+            padding-right: 10px;
+            width: 72px;
+        }
+
+        .podtext {
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        .audioContainer {
+            margin-bottom: .5em;
+        }
+
+        .controlContainer {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+        }
+
+        .controlContainer .play {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .controlContainer .time,
+        .controlContainer .play {
+            margin: auto 0;
+        }
+
+        .scrubberContainer {
+            flex-basis: 50%;
+            margin: auto 0;
+            position: relative;
+        }
+
+        .scrubberContainer div {
+            position: absolute;
+        }
+
+        .scrubberContainer .length {
+            background-color: gray;
+            height: 5px;
+            width: 100%;
+        }
+
+        .scrubberContainer .progress {
+            background-color: black;
+            height: 5px;
+            width: 0px;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="podContainer">
+        <img class="podcastImage" src="http://ww4.hdnux.com/photos/67/74/71/14667335/4/rawImage.png">
+        <h2 class="podhed">Start your day with local news</h2>
+        <p class="podtext">Trump is putting chocolate milk back into schools, LaMarcus Aldridge is thankful to get his favorite point guard
+            back and nothing says Christmas like some holiday brews.</p>
+        <div class="audioContainer">
+            <audio preload="auto" src="http://www.expressnews.com/file/257/2/2572-express-briefing.mp3"></audio>
+            <div class="controlContainer">
+                <p class="play">&#9658;</p>
+                <div class="scrubberContainer">
+                    <div class="length"></div>
+                    <div class="progress"></div>
+                </div>
+                <div class="time">
+                    <span class="current">0:00</span> /
+                    <span class="duration"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='./script.js'></script>
+</body>
+
+</html>
