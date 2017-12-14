@@ -19,7 +19,11 @@ function destroyDuplicateZone5() {
     }
 }
 
-destroyDuplicateZone5();
+try {
+    destroyDuplicateZone5();
+} catch (e) {
+
+}
 
 const audioContainer = document.querySelector('div.audioContainer');
 const audioElement = audioContainer.querySelector('audio');
